@@ -11,8 +11,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0d6efd;
-  --bs-indigo: #6610f2;
+  --bs-blue: #0dfd91;
+  --bs-indigo: #10f2f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
@@ -55,7 +55,7 @@
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.922), rgba(246, 238, 238, 0));
   --bs-body-font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -68,7 +68,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -78,7 +81,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family:var(--bs-body-color);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -86,7 +89,7 @@ body {
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(244, 243, 243, 0);
 }
 
 hr {
@@ -110,6 +113,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
+  color: #000;
 }
 @media (min-width: 1200px) {
   h1, .h1 {
@@ -126,8 +130,9 @@ h2, .h2 {
   }
 }
 
-h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+h6, .h6 {
+  font-size: Helvetica;
+  color: #000;
 }
 @media (min-width: 1200px) {
   h3, .h3 {
@@ -216,7 +221,7 @@ small, .small {
 
 mark, .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: #04f925;
 }
 
 sub,
@@ -300,6 +305,7 @@ figure {
 img,
 svg {
   vertical-align: middle;
+
 }
 
 table {
@@ -310,7 +316,7 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #6c757d;
+  color: #0c8bfa;
   text-align: left;
 }
 
@@ -607,7 +613,6 @@ progress {
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
-  border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
@@ -725,6 +730,7 @@ progress {
 
 .col-auto {
   flex: 0 0 auto;
+  color: #000;
   width: auto;
 }
 
@@ -3031,8 +3037,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #62eb56;
+  border-color: #62eb56;
 }
 .btn-primary:hover {
   color: #fff;
@@ -3943,7 +3949,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #0d6efd;
+  color: #000000;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -3953,7 +3959,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #0a58ca;
+  color: #000000;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -4054,7 +4060,7 @@ textarea.form-control-lg {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.30rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -7845,6 +7851,7 @@ textarea.form-control-lg {
 .bg-dark {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+
 }
 
 .bg-black {
@@ -9918,6 +9925,7 @@ textarea.form-control-lg {
 
   .text-lg-start {
     text-align: left !important;
+    color: #000;
   }
 
   .text-lg-end {
@@ -11289,8 +11297,8 @@ textarea.form-control-lg {
   }
 }
 .features-icons {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .features-icons .features-icons-item {
   max-width: 20rem;
@@ -11304,16 +11312,13 @@ textarea.form-control-lg {
 
 header.masthead {
   position: relative;
-  background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
-  background-size: cover;
-  padding-top: 8rem;
+  background-size: var(--bs-white);
   padding-bottom: 8rem;
 }
 header.masthead:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
+  background-color:  #F1F3FF;
   height: 100%;
   width: 100%;
   top: 0;
@@ -11321,15 +11326,20 @@ header.masthead:before {
   opacity: 0.5;
 }
 header.masthead h1, header.masthead .h1 {
-  font-size: 2rem;
+  font-size: 36px;
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 4rem;
+    padding-bottom: 4px;
+
   }
   header.masthead h1, header.masthead .h1 {
-    font-size: 3rem;
+    font-size: 36px;
+    
+    
+    
+    
   }
 }
 
